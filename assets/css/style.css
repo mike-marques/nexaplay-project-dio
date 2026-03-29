@@ -1,0 +1,776 @@
+  @font-face {
+    font-family: "quicksand";
+    src: url(../fonts/quicksand-regular.ttf) format("truetype");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "quicksand";
+    src: url(../fonts/quicksand-bold.ttf) format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "raleway";
+    src: url(../fonts/raleway-regular.ttf) format("truetype");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  :root {
+    --primary-color: #020228;
+    --secondary-color: #ff00e5;
+    --tertiary-color: #b535f6;
+    --btn-bg-color-gradient: linear-gradient(45deg,
+        #9b34ef 0%,
+        #490cb0 45%,
+        transparent 97%);
+    --btn-link-bg-color: #fff;
+    --btn-link-color: #000;
+    --card-bg-color: linear-gradient(0deg, transparent, #3b1e63);
+    --divider-bg-color: linear-gradient(90deg,
+        #5516ba,
+        rgba(255, 0, 229, 0.5) 80%);
+    --nav-bg-color: rgba(0, 0, 0, 0.3);
+    --text-color: #fff;
+    --link-color: #9e86ff;
+    --form-bg-color: rgba(211, 211, 211, 0.06);
+    --form-field-bg-color: rgba(0, 0, 0, 0.2);
+    --form-field-border: 1px solid rgba(255, 255, 255, 0.7);
+    --form-field-placeholder: rgba(255, 255, 255, 0.7);
+    --form-field-error: rgb(255, 76, 76);
+  }
+
+  header {
+    background: var(--nav-bg-color);
+    color: var(--text-color);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    gap: 1rem;
+  }
+
+  nav .links {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  nav .links a {
+    color: var(--text-color);
+    font-family: "raleway", sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    letter-spacing: 0.05em;
+  }
+
+  .span-nav {
+    font-family: "raleway", sans-serif;
+    font-weight: 700;
+    font-size: 1.25rem;
+    letter-spacing: 0.05rem;
+  }
+
+  .btn-subscribe {
+    background: var(--tertiary-color);
+    color: var(--btn-link-color);
+    padding: 0.1rem 1rem;
+    border-radius: 50px;
+    font-family: "raleway", sans-serif;
+    font-weight: 700;
+  }
+
+  .btn-subscribe:hover {
+    background: var(--btn-link-bg-color);
+    color: var(--btn-link-color);
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+
+  main {
+    padding-top: 6rem;
+  }
+
+  body {
+    background: var(--primary-color);
+    color: var(--text-color);
+    width: 100%;
+    height: auto;
+  }
+
+  .brands {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem 1rem;
+  }
+
+  .brands p {
+    font-family: "raleway", sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    text-transform: uppercase;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 1rem;
+    gap: 2rem;
+  }
+
+  .content h1 {
+    font-family: "raleway", sans-serif;
+    font-size: 1.25rem;
+    font-weight: lighter;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    padding: 0 4rem;
+  }
+
+  .content h2 {
+    font-family: "quicksand", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    line-height: 1.5;
+    padding: 0 3rem;
+  }
+
+  hr {
+    width: 70%;
+    height: 0.25rem;
+    background: var(--divider-bg-color);
+    border-radius: 50px;
+    outline: 2px solid transparent;
+  }
+
+  .content p {
+    font-family: "quicksand", sans-serif;
+    font-size: 0.875rem;
+    font-weight: 300;
+    padding: 0 4rem;
+    line-height: 1.5;
+  }
+
+  .content-plan {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0rem;
+  }
+
+  .content span {
+    font-family: "quicksand", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 300;
+  }
+
+  span small {
+    font-size: 0.875rem;
+    font-weight: 300;
+  }
+
+  .content a {
+    color: var(--text-color);
+    padding: 0.3rem 1rem;
+    border-radius: 50px;
+    font-family: "raleway", sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    outline: 3px solid transparent;
+  }
+
+  .content .btn-subscribe {
+    animation: wiggle 1.5s ease-in-out infinite;
+    cursor: pointer;
+    background: var(--btn-bg-color-gradient);
+  }
+
+  .btn-subscribe:hover {
+    background: transparent;
+    color: var(--btn-link-bg-color);
+    border: 2px solid var(--tertiary-color);
+  }
+
+  @keyframes wiggle {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    10% {
+      transform: rotate(-10deg);
+    }
+
+    15% {
+      transform: rotate(10deg);
+    }
+
+    25% {
+      transform: rotate(-10deg);
+    }
+
+    35% {
+      transform: rotate(5deg);
+    }
+
+    45% {
+      transform: rotate(-5deg);
+    }
+
+    60% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+
+  .plans {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 90%;
+    max-width: 37.5rem;
+    margin: 2rem auto 0 auto;
+  }
+
+  .plan {
+    padding: 2rem 1.5rem;
+    border-radius: 10px;
+    background: var(--card-bg-color);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    height: 100%;
+  }
+
+  .plan ul li::before {
+    content: " + ";
+    padding-right: 1rem;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    font-size: 1.25rem;
+  }
+
+  .plan-text-color {
+    color: var(--secondary-color);
+    font-size: 1.25rem;
+  }
+
+  .plan-text-color small {
+    color: var(--text-color);
+    font-size: 0.875rem;
+  }
+
+  .plans-section h2 {
+    text-align: center;
+    padding: 0 4rem;
+    font-family: "raleway", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 1.5;
+    margin-top: 1rem;
+  }
+
+  .basic-plan,
+  .standard-plan {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem 0 2rem;
+  }
+
+  .plan ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .btn-plan {
+    cursor: pointer;
+    border-radius: 50px;
+    padding: 0.625rem 1rem;
+    background: var(--btn-bg-color-gradient);
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    text-transform: uppercase;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+
+  .btn-plan:hover {
+    background: var(--btn-link-bg-color);
+    color: var(--btn-link-color);
+    border: 2px solid var(--tertiary-color);
+  }
+
+  .carousel-section h2 {
+    padding: 0 2rem;
+    text-align: center;
+    font-family: "raleway", sans-serif;
+    margin: 2rem;
+
+  }
+
+  .carousel-section::webkit-scrollbar {
+    display: none;
+  }
+
+  .carousel-section {
+    scrollbar-width: none;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .movie{
+    transition: background 10s ease;
+  }
+
+  .movie:hover {
+    border: var(--tertiary-color);
+    border-width: 3px;
+    border-style: solid;
+  }
+
+  .movies img {
+    width: 80%;
+    flex-shrink: 0;
+    display: none;
+    margin: 0 auto;
+    aspect-ratio: 9/13;
+  }
+
+  img {
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+  }
+
+  .movie.active {
+    display: block;
+  }
+
+  footer, .format-login-footer {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .links-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    gap: 1rem;
+    padding: 1rem 1rem;
+    font-family: "raleway", sans-serif;
+  }
+
+  .links-footer a {
+    color: var(--link-color);
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    font-weight: 300;
+  }
+
+  footer small {
+    color: var(--link-color);
+    text-align: center;
+    display: block;
+    font-size: 0.875rem;
+  }
+
+  .social-media {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    max-width: 14rem;
+    margin: 3rem auto 1rem auto;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--tertiary-color);
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color);
+  }
+
+  form {
+    width: 90%;
+    max-width: 30rem;
+    margin: auto;
+    background-color: var(--form-bg-color);
+    padding: 2rem;
+    border-radius: 10px;
+  }
+
+  form h2{
+    text-align: center;
+    font-family: "raleway", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 1.5;
+    padding: 0 4rem;
+    margin-bottom: 1.5rem;
+  }
+
+  label {
+    display: block;
+    font-family: "raleway", sans-serif;
+    font-size: 0.875rem;
+    font-weight: 300;
+  }
+
+  input {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 5px;
+    background: var(--form-field-bg-color);
+    border: var(--form-field-border);
+    color: var(--text-color);
+    font-family: "raleway", sans-serif;
+    font-size: 1rem;
+
+  }
+
+  input::placeholder {
+    color: var(--form-field-placeholder);
+  }
+
+  .buttons-login{
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    transition: background 10s ease;
+  }
+
+  .buttons-login button, form p{
+    font-size: 1.25rem;
+  }
+
+  button, .btn{
+    color: var(--btn-link-bg-color);
+    margin-bottom: 1rem;
+  }
+
+  .login-footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.25rem;
+    margin-bottom: 2.5rem;
+    font-family: "raleway", sans-serif;
+    font-size: 1.25rem;
+    margin-top: 2rem;
+  }
+
+  .social-media-login{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+  }
+
+  .social-media-login a img{
+    width: 3rem;
+    margin-top: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+
+  @media (min-width: 481px) {
+    nav {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .content h1 {
+      font-size: 1.5rem;
+    }
+
+    .content h2 {
+      font-size: 2rem;
+    }
+
+    .movies {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      padding: 1rem;
+      gap: 1.7rem;
+    }
+
+    .movies img {
+      display: block;
+      width: 95%;
+      aspect-ratio: 9/13;
+    }
+
+    .movies img {
+      width: 95%;
+      transition: transform 0.7s ease;
+    }
+
+    .movie:hover {
+      transform: scale(1.07);
+    }
+
+    .btn-subscribe {
+      font-size: 1rem;
+      padding: 0.3rem 1.5rem;
+    }
+
+    .btn-plan {
+      font-size: 1rem;
+      padding: 0.625rem 1.5rem;
+    }
+
+    .content a {
+      font-size: 1rem;
+    }
+
+    .text-plan {
+      font-size: 1.25rem;
+    }
+
+    .text-format {
+      font-size: 0.875rem;
+    }
+
+    .content p {
+      font-size: 1rem;
+    }
+
+    .content span {
+      font-size: 1.5rem;
+    }
+
+    span small {
+      font-size: 1rem;
+    }
+
+    .links-footer{
+      display: flex;
+      flex-direction: row;
+    }
+  }
+
+  @media (min-width: 769px) {
+    .content h1 {
+      font-size: 2rem;
+    }
+
+    .content h2 {
+      font-size: 2.5rem;
+    }
+
+    .movies {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+    }
+
+    .movies img {
+      width: 100%;
+    }
+
+    .btn-plan {
+      font-size: 1rem;
+      padding: 0.625rem 2rem;
+    }
+
+    .btn-subscribe {
+      padding: 0.3rem 2rem;
+    }
+
+    .content a {
+      font-size: 1rem;
+    }
+
+    .links-footer a {
+      font-size: 1rem;
+    }
+
+    footer small {
+      font-size: 1rem;
+    }
+
+    footer div img {
+      width: 30px;
+    }
+
+    .text-format {
+      font-size: 1rem;
+    }
+
+    .text-plan {
+      font-size: 1.5rem;
+    }
+
+    .content p {
+      font-size: 1.25rem;
+    }
+
+    .content span {
+      font-size: 1.75rem;
+    }
+
+    .span small {
+      font-size: 1.25rem;
+    }
+  }
+
+  @media (min-width: 1025px) {
+    .content h1 {
+      font-size: 2.5rem;
+    }
+
+    .content h2 {
+      font-size: 3rem;
+    }
+
+    .plans {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      gap: 2rem;
+      max-width: 60rem;
+      width: 100%;
+    }
+
+    .plan {
+      width: 100%;
+    }
+
+    .btn-basic {
+      margin-top: 2.5rem;
+    }
+
+    .movies {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      padding: 2rem;
+    }
+
+    .btn-plan {
+      font-size: 1.25rem;
+      padding: 0.625rem 2rem;
+    }
+
+    .btn-subscribe {
+      font-size: 1.25rem;
+      padding: 0.3rem 2rem;
+    }
+
+    .content a {
+      font-size: 1.25rem;
+    }
+
+    .links-footer a {
+      font-size: 1.25rem;
+    }
+
+    footer small {
+      font-size: 1.25rem;
+    }
+
+    footer div img {
+      width: 40px;
+    }
+
+    .text-format {
+      font-size: 1.25rem;
+    }
+
+    .text-plan {
+      font-size: 1.75rem;
+    }
+
+    .content p {
+      font-size: 1.5rem;
+    }
+
+    .content span {
+      font-size: 2rem;
+    }
+
+    span small {
+      font-size: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .content h1 {
+      font-size: 3rem;
+    }
+
+    .content h2 {
+      font-size: 3.5rem;
+    }
+
+    .links-footer a {
+      font-size: 1.5rem;
+    }
+
+    footer small {
+      font-size: 1.5rem;
+    }
+
+    footer div img {
+      width: 50px;
+    }
+
+    .text-format {
+      font-size: 1.5rem;
+    }
+
+    .text-plan {
+      font-size: 2rem;
+    }
+
+    .content p {
+      font-size: 1.75rem;
+    }
+
+    .content span {
+      font-size: 2.5rem;
+    }
+
+    span small {
+      font-size: 2rem;
+    }
+  }

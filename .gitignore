@@ -1,0 +1,21 @@
+# Windows / OneDrive
+*.LOG*
+ntuser.ini
+desktop.ini
+*.ini
+*.txt
+
+# Pastas do sistema
+Saved Games/
+Searches/
+Videos/
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Arquivos temporários de CSS/JS
+*.css.map
+*.js.map
+*.min.js
+*.min.css
